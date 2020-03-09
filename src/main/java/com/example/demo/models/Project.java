@@ -13,17 +13,23 @@ public class Project {
     private String title;
     private String description;
     private Date startDate;
+    private Project_Access project_access;
     @OneToMany(mappedBy = "project")
     private List<Project_User> project_users;
     @OneToMany
     private List<Ticket> tickets;
 
-    public Long getId() {
+    private enum Project_Access{
+        PUBLIC,
+        PRIVATE
+    }
+
+    public Long getProject_id() {
         return project_id;
     }
 
-    public void setId(Long id) {
-        this.project_id = id;
+    public void setProject_id(Long project_id) {
+        this.project_id = project_id;
     }
 
     public String getTitle() {
@@ -48,6 +54,14 @@ public class Project {
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    public Project_Access getProject_access() {
+        return project_access;
+    }
+
+    public void setProject_access(Project_Access project_access) {
+        this.project_access = project_access;
     }
 
     public List<Project_User> getProject_users() {

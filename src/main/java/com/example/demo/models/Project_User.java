@@ -20,6 +20,7 @@ public class Project_User {
     private user_status user_type;
 
     private enum user_status{
+        CREATOR,
         ADMIN,
         CONTRIBUTOR
     }
