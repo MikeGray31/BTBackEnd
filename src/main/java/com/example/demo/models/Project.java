@@ -13,7 +13,7 @@ public class Project {
     private String title;
     private String description;
     private Date startDate;
-    @OneToMany
+    @OneToMany(mappedBy = "project")
     private List<Project_User> project_users;
     @OneToMany
     private List<Ticket> tickets;

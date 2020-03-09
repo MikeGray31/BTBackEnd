@@ -13,7 +13,7 @@ public class User {
 	private String userName;
 	private String screenName;
 	private String password;
-	@OneToMany
+	@OneToMany(mappedBy = "user")
 	private List<Project_User> project_users;
 
 	public Long getId() {

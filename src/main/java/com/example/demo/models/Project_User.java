@@ -17,7 +17,10 @@ public class Project_User {
     @JoinColumn(name = "project_id")
     private Project project;
 
-    private enum user_status{
+    private user_status user_type;
 
+    private enum user_status{
+        ADMIN,
+        CONTRIBUTOR
     }
 }
