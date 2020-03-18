@@ -24,4 +24,36 @@ public class Project_User {
         ADMIN,
         CONTRIBUTOR
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public user_status getUser_type() {
+        return user_type;
+    }
+
+    public void setUser_type(user_status user_type) {
+        this.user_type = user_type;
+    }
 }
