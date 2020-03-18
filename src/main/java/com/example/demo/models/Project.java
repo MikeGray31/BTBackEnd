@@ -19,8 +19,9 @@ public class Project {
     @OneToMany
     private List<Ticket> tickets;
 
-    private enum Project_Access{
+    private enum Project_Access {
         PUBLIC,
+        FRIENDS_ONLY,
         PRIVATE
     }
 

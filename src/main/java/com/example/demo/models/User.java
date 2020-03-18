@@ -14,7 +14,7 @@ public class User {
 	private String screenName;
 	private String password;
 	@OneToMany(mappedBy = "user")
-	private List<Project_User> project_users;
+	private	 List<Project_User> project_users;
 
 	public Long getUser_id() {
 		return user_id;
