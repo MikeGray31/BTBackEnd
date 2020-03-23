@@ -1,15 +1,15 @@
 package com.example.demo.dtos;
 
-public class LoginRequest {
+public class ProjectMemberRequest {
 
     private String userName;
-    private String password;
+    private String status;
 
     public String getUserName() {
         return userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getStatus() {
+        return status;
     }
 }

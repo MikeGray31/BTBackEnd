@@ -1,6 +1,5 @@
 package com.example.demo.services;
 
-import com.example.demo.models.Project;
 import com.example.demo.models.Project_User;
 import com.example.demo.models.User;
 import com.example.demo.repositories.ProjectRepository;
@@ -49,9 +48,10 @@ public class UserServices {
 
     public List<User> getProjectMembers(Long projectId) {
         List<User> project_users = new ArrayList<>();
-        for(Project_User pu : this.projectRepository.findById(projectId).get().getProject_users()) {
-            project_users.add(pu.getUser());
+        for(Project_User user : this.projectRepository.findById(projectId).get().getProject_users()) {
+            project_users.add(user.getUser());
         }
         return project_users;
     }
+
 }
