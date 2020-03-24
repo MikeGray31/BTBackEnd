@@ -55,4 +55,8 @@ public class User {
 	public void setProject_users(List<Project_User> project_users) {
 		this.project_users = project_users;
 	}
+
+	public void addProjectUser(Project_User project_user) {
+		this.project_users.add(project_user);
+	};
 }

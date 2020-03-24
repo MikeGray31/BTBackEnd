@@ -80,4 +80,8 @@ public class Project {
     public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
+
+    public void addProjectUser(Project_User project_user) {
+        this.project_users.add(project_user);
+    };
 }
