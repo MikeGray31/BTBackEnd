@@ -52,7 +52,7 @@ public class ProjectServices {
         if(newMemberInfo.getStatus().equals("ADMIN")) newMember.setUser_type(Project_User.user_status.ADMIN);
         else newMember.setUser_type(Project_User.user_status.CONTRIBUTOR);
 
-        Project addToThis = this.projectRepository.findById(newMemberInfo.getProjectId()).get();
+        Project addToThis = findProject(newMemberInfo.getProjectId());
         User addThisPerson = this.userRepository.findById(newMemberInfo.getUserId()).get();
 
         addToThis.addProjectUser(newMember);
